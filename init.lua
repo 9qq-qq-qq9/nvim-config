@@ -1,5 +1,11 @@
+local wsl = false
+
 -- runs our vim options on startup
 require("options")
+
+if wsl then
+  require("wsl-clip")
+end
 
 -- ensure lazy (our package manager) is installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
