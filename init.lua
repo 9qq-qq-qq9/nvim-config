@@ -1,4 +1,4 @@
-local wsl = false
+local wsl = true
 
 -- runs our vim options on startup
 require("options")
