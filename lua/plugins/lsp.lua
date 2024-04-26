@@ -17,8 +17,11 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.rust_analyzer.setup({})
+      require("mason-lspconfig").setup_handlers({
+        function(server)
+          lspconfig[server].setup({})
+        end,
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
