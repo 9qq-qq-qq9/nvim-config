@@ -5,7 +5,12 @@ return {
     name = "kanagawa",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme "kanagawa-dragon"
+      require("kanagawa").setup({
+        commentStyle = { italic = false },
+        keywordStyle = { italic = false }
+      })
+      
+      vim.cmd.colorscheme("kanagawa-dragon")
     end
   }
 }
