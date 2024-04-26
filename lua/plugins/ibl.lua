@@ -4,7 +4,7 @@ return {
   config = function()
     require("ibl").setup({
       indent = {
-        char = "|"
+        char = "▏"
       },
       scope = {
         show_start = false,
