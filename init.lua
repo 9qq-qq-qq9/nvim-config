@@ -1,10 +1,22 @@
-local wsl = true
-
--- runs our vim options on startup
+-- runs vim options and keymaps on startup
 require("options")
+require("keymaps")
 
+-- wsl clipboard functionality using pwsh
+local wsl = false
 if wsl then
-  require("wsl-clip")
+  vim.g.clipboard = {
+    name = 'wslclipboard',
+    copy = {
+      ['+'] = 'clip.exe',
+      ['*'] = 'clip.exe',
+    },
+    paste = {
+      ['+'] = 'powershell.exe -c [console]::out.write($(get-clipboard -raw).tostring().replace("`r", ""))',
+      ['*'] = 'powershell.exe -c [console]::out.write($(get-clipboard -raw).tostring().replace("`r", ""))',
+    },
+    cache_enabled = 0,
+  }
 end
 
 -- ensure lazy (our package manager) is installed

@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 -- change tab functionality to put 2 spaces
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
