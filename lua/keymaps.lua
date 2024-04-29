@@ -4,3 +4,4 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<Tab>", "<CMD>bnext<CR>", {})
 vim.keymap.set("n", "<S-Tab>", "<CMD>bprev<CR>", {})
 vim.keymap.set("n", "<leader>x", "<CMD>bdelete<CR>", {})
+vim.keymap.set("n", "<leader>e", "<CMD>tabnew<CR>", {})
