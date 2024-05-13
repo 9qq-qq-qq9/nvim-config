@@ -13,3 +13,9 @@ vim.keymap.set("n", "<Esc>", "<CMD>noh<CR><Esc>", {})
 vim.keymap.set("i", "<S-Tab>", "<CMD> >> <CR>", {})
 
 vim.keymap.set("n", "ZW", "<CMD>w<CR>", {})
+
+-- break arrowkey habit
+vim.keymap.set({"n", "i"}, "<Up>", "<Nop>", {})
+vim.keymap.set({"n", "i"}, "<Down>", "<Nop>", {})
+vim.keymap.set({"n", "i"}, "<Left>", "<Nop>", {})
+vim.keymap.set({"n", "i"}, "<Right>", "<Nop>", {})
