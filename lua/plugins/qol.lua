@@ -5,9 +5,6 @@ return {
     config = true,
   },
   {
-    "RRethy/vim-illuminate",
-  },
-  {
     "numToStr/Comment.nvim",
     lazy = false,
     config = function()
